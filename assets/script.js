@@ -1,29 +1,35 @@
 var btn = document.createElement("button")
+var timer = document.getElementById("timer")
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
     btn.innerHTML = "Click here to begin! Good luck!";
-    document.getElementById("quiz-content").appendChild(btn);
+    document.getElementById("start-button").appendChild(btn);
     btn.setAttribute("style", "background-color:red; color:white; padding:50px; font-size:20px; margin:auto; margin-top:100px;");
 };
 
-var generateQuiz = function() {
-    document.body.innerHTML = "";
+var clearPage = function() {
+    document.getElementById("wrapper").textContent = "";
+};
 
-    var countdown = function() {
-            var timeLeft = 1;
+// a timer will begin countding down from 60 seconds
 
-            var timeInterval = setInterval(function() {
-            if (timeLeft <= 0) {
-                clearInterval(timeInterval);
-                window.alert("You've run out of time! Let's see how you did!");
-            } else {
-            timeLeft--;
-            }
-        }, 1000);
-    }
-    countdown();
-    };
+var countdown = function() {
+    var timeLeft = 60;
+
+    var timeInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timeInterval);
+            window.alert("You've run out of time! Let's see how you did!");
+        } else {
+        timer.textContent = timeLeft + " seconds remain."
+        timeLeft--;
+        }
+    }, 1000);
+};
+
+
+
     
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
@@ -35,7 +41,8 @@ var generateQuiz = function() {
 // their score will be logged into the localstorage
 
 btn.addEventListener("click", function() {
-    generateQuiz();  
+    clearPage();
+    countdown();  
 });
 
 beginQuiz();
