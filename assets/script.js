@@ -22,7 +22,7 @@ var countdown = function() {
             clearInterval(timeInterval);
             window.alert("You've run out of time! Let's see how you did!");
         } else {
-        timer.textContent = timeLeft + " seconds remain."
+        timer.textContent = timeLeft + " seconds remaining."
         timeLeft--;
         }
     }, 1000);
