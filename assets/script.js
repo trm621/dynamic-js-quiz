@@ -1,5 +1,4 @@
 var btn = document.createElement("button")
-var genQuestion = document.createElement("div")
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
@@ -10,13 +9,22 @@ var beginQuiz = function() {
 
 var generateQuiz = function() {
     document.body.innerHTML = "";
-};
 
-// a countdown will begin
+    var countdown = function() {
+            var timeLeft = 1;
 
-var countdown = function() {
-
-};
+            var timeInterval = setInterval(function() {
+            if (timeLeft <= 0) {
+                clearInterval(timeInterval);
+                window.alert("You've run out of time! Let's see how you did!");
+            } else {
+            timeLeft--;
+            }
+        }, 1000);
+    }
+    countdown();
+    };
+    
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
 
@@ -28,7 +36,6 @@ var countdown = function() {
 
 btn.addEventListener("click", function() {
     generateQuiz();  
-    countdown();  
 });
 
 beginQuiz();
