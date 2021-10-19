@@ -1,3 +1,11 @@
+var btn = document.createElement("button")
+var genQuestion = document.createElement("div")
+
+    btn.innerHTML = "Click here to begin! Good luck!";
+    document.getElementById("quiz-content").appendChild(btn);
+    btn.setAttribute("style", "background-color:black; color:white; padding:50px; font-size:20px; margin:auto;");
+
+
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 
 // a countdown will begin
