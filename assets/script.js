@@ -8,12 +8,15 @@ var beginQuiz = function() {
     btn.setAttribute("style", "background-color:red; color:white; padding:50px; font-size:20px; margin:auto; margin-top:100px;");
 };
 
-    generateQuiz = function() {
-        document.body.innerHTML = "";
-    };
-
+var generateQuiz = function() {
+    document.body.innerHTML = "";
+};
 
 // a countdown will begin
+
+var countdown = function() {
+
+};
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
 
@@ -24,7 +27,8 @@ var beginQuiz = function() {
 // their score will be logged into the localstorage
 
 btn.addEventListener("click", function() {
-    generateQuiz();    
+    generateQuiz();  
+    countdown();  
 });
 
 beginQuiz();
