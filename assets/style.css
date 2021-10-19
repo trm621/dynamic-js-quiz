@@ -1,0 +1,13 @@
+h1 {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    font-family: Helvetica;
+}
+
+
+html {
+    background-image: linear-gradient(to right, red, yellow);
+}
+
