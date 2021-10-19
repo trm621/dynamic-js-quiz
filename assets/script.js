@@ -1,12 +1,16 @@
 var btn = document.createElement("button")
 var genQuestion = document.createElement("div")
 
+// when user clicks button labelled "begin" the quiz will begin and take them to the first question
+
     btn.innerHTML = "Click here to begin! Good luck!";
     document.getElementById("quiz-content").appendChild(btn);
-    btn.setAttribute("style", "background-color:black; color:white; padding:50px; font-size:20px; margin:auto;");
+    btn.setAttribute("style", "background-color:black; color:white; padding:50px; font-size:20px; margin:auto; margin-top:100px;");
 
+    generateQuiz = function() {
+        document.getElementById("quiz-content").removeChild(btn);
+    };
 
-// when user clicks button labelled "begin" the quiz will begin and take them to the first question
 
 // a countdown will begin
 
@@ -17,3 +21,7 @@ var genQuestion = document.createElement("div")
 // when users answer every question, they will be taken to a page letting them know how they did
 
 // their score will be logged into the localstorage
+
+btn.addEventListener("click", function() {
+    generateQuiz();    
+});
