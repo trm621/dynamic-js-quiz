@@ -1,6 +1,8 @@
 var btn = document.createElement("button")
 var h3 = document.createElement("h3");
 var timer = document.getElementById("timer")
+var par = document.createElement("p");
+var listItemEl = document.createElement("li");
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
@@ -16,7 +18,7 @@ var clearLandingPage = function() {
 // a timer will begin countding down from 60 seconds
 
 var countdown = function() {
-    var timeLeft = 5;
+    var timeLeft = 120;
 
     var timeInterval = setInterval(function() {
         if (timeLeft <= 0) {
@@ -33,9 +35,16 @@ var countdown = function() {
     return timeLeft;
 };
 
-var generateQuestion = function() {
+var generateQuiz = function() {
     h3.textContent = "Question One";
-    document.getElementById("question-1").appendChild(h3);
+        document.getElementById("question-1").appendChild(h3);
+    par.textContent = "blah blah";
+        document.getElementById("question-1").appendChild(par)
+    listItemEl.textContent = "THIS IS A CHOICE";
+
+
+
+    
 }
 
 
@@ -53,7 +62,7 @@ var generateQuestion = function() {
 btn.addEventListener("click", function() {
     clearLandingPage();
     countdown();
-    generateQuestion();
+    generateQuiz();
 });
 
 beginQuiz();
