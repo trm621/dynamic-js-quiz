@@ -16,12 +16,14 @@ var clearLandingPage = function() {
 // a timer will begin countding down from 60 seconds
 
 var countdown = function() {
-    var timeLeft = 60;
+    var timeLeft = 5;
 
     var timeInterval = setInterval(function() {
         if (timeLeft <= 0) {
             window.alert("You've run out of time! Let's see how you did!");
             clearInterval(timeInterval);
+            document.getElementById("timer").textContent = "";
+            document.getElementById("question-wrapper").textContent = "";
         } else {
         timer.textContent = timeLeft + " seconds remaining."
         timeLeft--;
