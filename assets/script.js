@@ -1,4 +1,5 @@
 var btn = document.createElement("button")
+var h3 = document.createElement("h3");
 var timer = document.getElementById("timer")
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
@@ -8,7 +9,7 @@ var beginQuiz = function() {
     btn.setAttribute("style", "background-color:red; color:white; padding:50px; font-size:20px; margin:auto; margin-top:100px;");
 };
 
-var clearPage = function() {
+var clearLandingPage = function() {
     document.getElementById("wrapper").textContent = "";
 };
 
@@ -19,14 +20,21 @@ var countdown = function() {
 
     var timeInterval = setInterval(function() {
         if (timeLeft <= 0) {
-            clearInterval(timeInterval);
             window.alert("You've run out of time! Let's see how you did!");
+            clearInterval(timeInterval);
         } else {
         timer.textContent = timeLeft + " seconds remaining."
         timeLeft--;
         }
     }, 1000);
+    console.log(timeLeft);
+    return timeLeft;
 };
+
+var generateQuestion = function() {
+    h3.textContent = "Question One";
+    document.getElementById("question-1").appendChild(h3);
+}
 
 
 
@@ -41,8 +49,9 @@ var countdown = function() {
 // their score will be logged into the localstorage
 
 btn.addEventListener("click", function() {
-    clearPage();
-    countdown();  
+    clearLandingPage();
+    countdown();
+    generateQuestion();
 });
 
 beginQuiz();
