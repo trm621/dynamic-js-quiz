@@ -43,15 +43,119 @@ var countdown = function() {
     return timeLeft;
 };
 
-var generateQuiz = function() {
+var questionOne = function() {
     divC.textContent = "Question One";
     body.appendChild(divC);
         divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
     divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
     listItem1.textContent = "THIS IS A CHOICE";
         list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; background-color:red; text-align:center;");
+        listItem1.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
 };    
+
+var questionTwo = function() {
+    divC.textContent = "Question Two";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; text-align:left; width:30%;");
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; text-align:left; width:30%;");
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; text-align:left; width:30%;");
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; text-align:left; width:30%;");
+
+};
+
+var questionThree = function() {
+    divC.textContent = "Question Three";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+
+};
+
+var questionFour = function() {
+    divC.textContent = "Question Four";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+
+};
+
+var questionFive = function() {
+    divC.textContent = "Question Five";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding: 20px; text-align:left; width:30%;");
+
+};
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
 
@@ -64,7 +168,7 @@ var generateQuiz = function() {
 btn.addEventListener("click", function() {
     clearLandingPage();
     countdown();
-    generateQuiz();
+    questionOne();
     listItem1.addEventListener("click", function() {
         
     });
