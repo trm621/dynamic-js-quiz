@@ -1,8 +1,16 @@
+// element creators and selectors
+
 var btn = document.createElement("button")
 var h3 = document.createElement("h3");
 var timer = document.getElementById("timer")
 var par = document.createElement("p");
-var listItemEl = document.createElement("li");
+var listItem1 = document.createElement("li");
+var listItem2 = document.createElement("li");
+var listItem3 = document.createElement("li");
+var listItem4 = document.createElement("li");
+var list = document.createElement("ol");
+var divC = document.createElement("div");
+var body = document.body;
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
@@ -15,7 +23,7 @@ var clearLandingPage = function() {
     document.getElementById("wrapper").textContent = "";
 };
 
-// a timer will begin countding down from 60 seconds
+// a timer will begin countding down from 120 seconds
 
 var countdown = function() {
     var timeLeft = 120;
@@ -36,20 +44,14 @@ var countdown = function() {
 };
 
 var generateQuiz = function() {
-    h3.textContent = "Question One";
-        document.getElementById("question-1").appendChild(h3);
-    par.textContent = "blah blah";
-        document.getElementById("question-1").appendChild(par)
-    listItemEl.textContent = "THIS IS A CHOICE";
-
-
-
-    
-}
-
-
-
-    
+    divC.textContent = "Question One";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    divC.appendChild(list);
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; background-color:red; text-align:center;");
+};    
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
 
@@ -63,6 +65,9 @@ btn.addEventListener("click", function() {
     clearLandingPage();
     countdown();
     generateQuiz();
+    listItem1.addEventListener("click", function() {
+        
+    });
 });
 
 beginQuiz();
