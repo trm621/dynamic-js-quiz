@@ -241,7 +241,21 @@ var countdown = function() {
         if (question1 === false) {
             timer.textContent = timeLeft - 10 + " seconds remaining";
         }
+        if (question2 === false) {
+            timer.textContent = timeLeft - 10 + " seconds remaining."
+        }
+        if (question3 === false) {
+            timer.textContent = timeLeft - 10 + " seconds remaining."
+        }
+        if (question4 === false) {
+            timer.textContent = timeLeft - 10 + " seconds remaining."
+        }
+        if (question5 === false) {
+            timer.textContent = timeLeft - 10 + " seconds remaining."
+        }
     }, 1000);
+    console.log(timeLeft);
+    return timeLeft;
 };
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
