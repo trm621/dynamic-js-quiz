@@ -12,6 +12,11 @@ var list = document.createElement("ol");
 var divC = document.createElement("div");
 var body = document.body;
 var timeLeft;
+var question1;
+var question2;
+var question3;
+var question4;
+var question5;
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
@@ -39,8 +44,7 @@ var questionOne = function() {
         list.appendChild(listItem1);
         listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
         listItem1.addEventListener("click", function () {
-            console.log(false);
-            return false,
+            question1 = false,
             questionTwo();
         });
     listItem2.textContent = "while";
@@ -234,12 +238,10 @@ var countdown = function() {
         timer.textContent = timeLeft + " seconds remaining."
         timeLeft--;
         }
+        if (question1 === false) {
+            timer.textContent = timeLeft - 10 + " seconds remaining";
+        }
     }, 1000);
-    if (questionOne === false) {
-        timer.textContent = timeLeft - 10;
-    }
-    console.log(timeLeft);
-    return timeLeft;
 };
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
