@@ -11,6 +11,7 @@ var listItem4 = document.createElement("li");
 var list = document.createElement("ol");
 var divC = document.createElement("div");
 var body = document.body;
+var timeLeft;
 
 // when user clicks button labelled "begin" the quiz will begin and take them to the first question
 var beginQuiz = function() {
@@ -24,6 +25,201 @@ var clearLandingPage = function() {
 };
 
 // a timer will begin countding down from 120 seconds
+
+var questionOne = function() {
+    className = "question-one";
+    divC.textContent = "Question One";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "Which of the following is NOT a conditional statement."; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "for";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem1.addEventListener("click", function () {
+            console.log(false);
+            return false,
+            questionTwo();
+        });
+    listItem2.textContent = "while";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem2.addEventListener("click", function() {
+            return false,
+            questionTwo();
+        });
+    listItem3.textContent = "but";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem3.addEventListener("click", function() {
+            return true,
+            questionTwo();
+        });
+    listItem4.textContent = "else";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem4.addEventListener("click", function() {
+            return false,
+            questionTwo();
+        });
+    };    
+
+var questionTwo = function() {
+    divC.textContent = "Question Two";
+    className = "question-two";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "Which of the following letters is used to represent an iterator."; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "i";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem1.addEventListener("click", function() {
+            return true,
+            questionThree();
+    });
+    listItem2.textContent = "p";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem2.addEventListener("click", function() {
+            return false,
+            questionThree();
+    });
+    listItem3.textContent = "r";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem3.addEventListener("click", function() {
+            return false,
+            questionThree();
+    });
+        listItem4.textContent = "y";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem4.addEventListener("click", function() {
+            return false,
+            questionThree();
+        })
+};
+
+var questionThree = function() {
+    divC.textContent = "Question Three";
+    divC.className = "question-three";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "What is an example of "; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem1.addEventListener("click", function() {
+            return false,
+            questionFour();
+        });
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem2.addEventListener("click", function() {
+            return false,
+            questionFour();
+        });
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem3.addEventListener("click", function() {
+            return false,
+            questionFour();
+        });
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem4.addEventListener("click", function() {
+            return false,
+            questionFour();
+        });
+};
+
+var questionFour = function() {
+    divC.textContent = "Question Four";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem1.addEventListener("click", function() {
+            return false,
+            questionFive();
+        })
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem2.addEventListener("click", function() {
+            return false,
+            questionFive();
+        });
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem3.addEventListener("click", function() {
+            return false,
+            questionFive();
+        });
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem4.addEventListener("click", function() {
+            return false,
+            questionFive();
+        });
+};
+
+var questionFive = function() {
+    className = "question-five";
+    divC.textContent = "Question Five";
+    body.appendChild(divC);
+        divC.setAttribute("style", "font-size:30px; text-align:center;");
+    h3.textContent = "THIS IS THE FIRST QUESTION"; 
+        divC.appendChild(h3);
+    divC.appendChild(list);
+        list.setAttribute("style", "list-style:none;");
+    listItem1.textContent = "THIS IS A CHOICE";
+        list.appendChild(listItem1);
+        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem1.addEventListener("click", function() {
+            return false,
+            endScreen();
+        })
+    listItem2.textContent = "THIS IS THE SECOND CHOICE";
+        list.appendChild(listItem2);
+        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem2.addEventListener("click", function() {
+            return false,
+            endScreen();
+        })
+    listItem3.textContent = "THIS IS THE THIRD CHOICE";
+        list.appendChild(listItem3);
+        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem3.addEventListener("click", function() {
+            return false,
+            endScreen();
+        })
+    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
+        list.appendChild(listItem4);
+        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
+        listItem4.addEventListner("click", function() {
+            return false,
+            endScreen();
+        })
+    };
 
 var countdown = function() {
     var timeLeft = 120;
@@ -39,126 +235,11 @@ var countdown = function() {
         timeLeft--;
         }
     }, 1000);
+    if (questionOne === false) {
+        timer.textContent = timeLeft - 10;
+    }
     console.log(timeLeft);
     return timeLeft;
-};
-
-var questionOne = function() {
-    className = "question-one";
-    divC.textContent = "Question One";
-    body.appendChild(divC);
-        divC.setAttribute("style", "font-size:30px; text-align:center;");
-    h3.textContent = "Which of the following is NOT a conditional statement."; 
-        divC.appendChild(h3);
-    divC.appendChild(list);
-        list.setAttribute("style", "list-style:none;");
-    listItem1.textContent = "for";
-        list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem2.textContent = "while";
-        list.appendChild(listItem2);
-        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem3.textContent = "but";
-        list.appendChild(listItem3);
-        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem4.textContent = "else";
-        list.appendChild(listItem4);
-        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-};    
-
-var questionTwo = function() {
-    divC.textContent = "Question Two";
-    className = "question-two";
-    body.appendChild(divC);
-        divC.setAttribute("style", "font-size:30px; text-align:center;");
-    h3.textContent = "Which of the following letters is used to represent an iterator."; 
-        divC.appendChild(h3);
-    divC.appendChild(list);
-        list.setAttribute("style", "list-style:none;");
-    listItem1.textContent = "i";
-        list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem2.textContent = "p";
-        list.appendChild(listItem2);
-        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem3.textContent = "r";
-        list.appendChild(listItem3);
-        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem4.textContent = "y";
-        list.appendChild(listItem4);
-        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-
-};
-
-var questionThree = function() {
-    divC.textContent = "Question Three";
-    divC.className = "question-three";
-    body.appendChild(divC);
-        divC.setAttribute("style", "font-size:30px; text-align:center;");
-    h3.textContent = "THIS IS THE FIRST QUESTION"; 
-        divC.appendChild(h3);
-    divC.appendChild(list);
-        list.setAttribute("style", "list-style:none;");
-    listItem1.textContent = "THIS IS A CHOICE";
-        list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem2.textContent = "THIS IS THE SECOND CHOICE";
-        list.appendChild(listItem2);
-        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem3.textContent = "THIS IS THE THIRD CHOICE";
-        list.appendChild(listItem3);
-        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
-        list.appendChild(listItem4);
-        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-
-};
-
-var questionFour = function() {
-    divC.textContent = "Question Four";
-    body.appendChild(divC);
-        divC.setAttribute("style", "font-size:30px; text-align:center;");
-    h3.textContent = "THIS IS THE FIRST QUESTION"; 
-        divC.appendChild(h3);
-    divC.appendChild(list);
-        list.setAttribute("style", "list-style:none;");
-    listItem1.textContent = "THIS IS A CHOICE";
-        list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem2.textContent = "THIS IS THE SECOND CHOICE";
-        list.appendChild(listItem2);
-        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem3.textContent = "THIS IS THE THIRD CHOICE";
-        list.appendChild(listItem3);
-        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
-        list.appendChild(listItem4);
-        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-
-};
-
-var questionFive = function() {
-    className = "question-five";
-    divC.textContent = "Question Five";
-    body.appendChild(divC);
-        divC.setAttribute("style", "font-size:30px; text-align:center;");
-    h3.textContent = "THIS IS THE FIRST QUESTION"; 
-        divC.appendChild(h3);
-    divC.appendChild(list);
-        list.setAttribute("style", "list-style:none;");
-    listItem1.textContent = "THIS IS A CHOICE";
-        list.appendChild(listItem1);
-        listItem1.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem2.textContent = "THIS IS THE SECOND CHOICE";
-        list.appendChild(listItem2);
-        listItem2.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem3.textContent = "THIS IS THE THIRD CHOICE";
-        list.appendChild(listItem3);
-        listItem3.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-    listItem4.textContent = "THIS IS THE FOURTH CHOICE";
-        list.appendChild(listItem4);
-        listItem4.setAttribute("style", "color:white; padding:20px; margin:auto; text-align:center; width:100px;");
-
 };
 
 // when user clicks one of the options, a sound will let users know if their choice is correct or incorrect
@@ -172,102 +253,9 @@ var questionFive = function() {
 btn.addEventListener("click", function() {
     clearLandingPage();
     countdown();
-    deployQuestionOne();
+    questionOne();
 });
 
 
-var deployQuestionOne = function() {
-    questionOne();
-    list.addEventListener("click", function() {
-        if (listItem1) {
-            console.log("Incorrect")
-        }
-        if (listItem2) {
-            console.log("Incorrect")
-        }
-        if (listItem4) {
-            console.log("Incorrect")
-        }
-        if (listItem3) {
-            console.log("Correct")
-        }
-        deployQuestionTwo();
-    });
-
-var deployQuestionTwo = function() {
-    questionTwo();
-    list.addEventListener("click", function() {
-        if (listItem1) {
-            console.log("YOU CLICKED LIST ITEM 1")
-        }
-        else if (listItem2) {
-            console.log("YOU CLICKED LIST ITEM 2")
-        }
-        else if (listItem3) {
-            console.log("YOU CLICKED LIST ITEM 3")
-        } 
-        else if (listItem4) {
-            console.log("YOU CLICKED LIST ITEM 4")
-        }
-        deployQuestionThree();
-    });
-}
-};
-
-var deployQuestionThree = function() {
-    questionThree();
-    list.addEventListener("click", function() {
-        if (listItem1) {
-            console.log("YOU CLICKED LIST ITEM 1 IN QUESTION 3")
-        }
-        else if (listItem2) {
-            console.log("YOU CLICKED LIST ITEM 2 IN QUESTION 3")
-        }
-        else if (listItem3) {
-            console.log("YOU CLICKED LIST ITEM 3 IN QUESTION 3")
-        }
-        else if (listItem4) {
-            console.log("YOU CLICKED LIST ITEM 4 IN QUESTION 3")
-        }
-        deployQuestionFour();
-    });
-};
-
-var deployQuestionFour = function() {
-    questionFour();
-    list.addEventListener("click", function() {
-        if (listItem1) {
-            console.log("YOU CLICKED IT!")
-        }
-        else if (listItem2) {
-        console.log("YOU CLICKED THE SECOND ONE") 
-        }
-        else if (listItem3) {
-            console.log("YOU CLICKED THE THIRD ONE")
-        }
-        else if (listItem4) {
-            console.log("YOU CLICKED THE FOURTH ONE")
-        }
-        deployQuestionFive();
-    });
-};
-
-var deployQuestionFive = function() {
-    questionFive();
-    list.addEventListener("click", function() {
-        if (listItem1) {
-            console.log("YOU CLICKED THE FIRST ONE IN QUESTION FIVE")
-        }
-        else if (listItem2) {
-            console.log("YOU CLICKED THE SECOND ONE IN QUESTION FIVE")
-        }
-        else if (listItem3) {
-            console.log("YOU CLICKED THE THIRD ONE IN QUESTION FIVE")
-        }
-        else if (listItem4) {
-            console.log("YOU CLICKED THE FOURTH ONE IN QUESTION FIVE")
-        }
-    })
-};
 
 beginQuiz();
