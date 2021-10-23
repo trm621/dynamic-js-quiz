@@ -226,10 +226,10 @@ var questionFive = function() {
     };
 
 var countdown = function() {
-    var timeLeft = 120;
+    var timeLeft = 20;
 
     var timeInterval = setInterval(function() {
-        if (timeLeft <= 0) {
+        if (timeLeft === 0) {
             window.alert("You've run out of time! Let's see how you did!");
             clearInterval(timeInterval);
             document.getElementById("timer").textContent = "";
@@ -239,19 +239,19 @@ var countdown = function() {
         timeLeft--;
         }
         if (question1 === false) {
-            timer.textContent = timeLeft - 10 + " seconds remaining";
+            timeLeft = timeLeft - 10;
         }
         if (question2 === false) {
-            timer.textContent = timeLeft - 10 + " seconds remaining."
+            timeLeft = timeLeft - 10;
         }
         if (question3 === false) {
-            timer.textContent = timeLeft - 10 + " seconds remaining."
+            timeLeft = timeLeft - 10;
         }
         if (question4 === false) {
-            timer.textContent = timeLeft - 10 + " seconds remaining."
+            timeLeft = timeLeft - 10;
         }
         if (question5 === false) {
-            timer.textContent = timeLeft - 10 + " seconds remaining."
+            timeLeft = timeLeft - 10;
         }
     }, 1000);
     console.log(timeLeft);
