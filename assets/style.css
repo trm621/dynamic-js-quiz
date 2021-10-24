@@ -24,6 +24,18 @@ h2 {
     font-family:  Georgia;
 }
 
+li {
+    color:white; 
+    padding:20px; 
+    margin:auto; 
+    text-align:center; 
+    width:100px;
+}
+
+ol {
+    list-style: none;
+}
+
 h3 {
     font-size: 40px;
     text-align: center;
