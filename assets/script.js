@@ -11,7 +11,7 @@ var listItem4 = document.createElement("li");
 var list = document.createElement("ol");
 var divC = document.createElement("div");
 var body = document.body;
-var timeLeft;
+var timeInterval;
 var question1;
 var question2;
 var question3;
@@ -61,8 +61,6 @@ var countdown = function() {
             timeLeft = timeLeft - 10;
         };
     }, 1000);
-    var value = timeLeft;
-    return value;
 };
 
 // question one will display 
@@ -245,6 +243,10 @@ var questionFive = function() {
             endScreen();
         })
     };
+
+var endScreen = function() {
+    
+}
 
 
 // their score will be logged into the localstorage
